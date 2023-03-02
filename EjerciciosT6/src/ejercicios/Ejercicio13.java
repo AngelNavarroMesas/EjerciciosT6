@@ -14,13 +14,16 @@ public class Ejercicio13 {
 		frase = sc.nextLine();
 		
 		for(int i=0;i<abc.length-1;i++) {
-			for(int x=0;i<frase.length();x++) {
+			for(int x=0;x<frase.length();x++) {
 				if(abc[i]==frase.charAt(x)) {
 					cont++;
 				}
 			}
-			System.out.println(abc[i]+": "+cont+" veces");
 			
+			if(cont>0) {
+				System.out.println(abc[i]+": "+cont+" veces");
+				cont=0;
+			}
 		}
 	}
 
